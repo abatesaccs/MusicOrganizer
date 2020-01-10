@@ -1,0 +1,14 @@
+@using MusicOrganizer.Models;
+
+@if ( @Model.Count == 0 )
+{
+    <h3>No categories have been added yet!</h3>
+}
+
+@foreach (Artist artist in Model)
+{
+    <h5><a href="/artist/@artist.Id/record/create">@artist.Name</a></h5>
+}
+
+
+<a href="/artist/create">Add an Artist to your list!</a>
